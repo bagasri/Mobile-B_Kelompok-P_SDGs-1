@@ -13,3 +13,4 @@ mudah dan lebih singkat.
 ### Progress
 
 - ☑ Membuat StartPage
+- ☑ Membuat LoginPage
