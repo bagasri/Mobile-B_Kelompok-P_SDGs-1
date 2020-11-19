@@ -14,3 +14,4 @@ mudah dan lebih singkat.
 
 - ☑ Membuat StartPage
 - ☑ Membuat LoginPage
+- ☑ Membuat RegisterPage
