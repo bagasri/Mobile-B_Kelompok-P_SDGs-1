@@ -1,5 +1,5 @@
-import 'package:cobaaa/Auth.dart';
-import 'package:cobaaa/Start.dart';
+import 'package:findjobs/Auth.dart';
+import 'package:findjobs/Start.dart';
 import 'package:flutter/material.dart';
 
 void main() {

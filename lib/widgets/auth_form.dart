@@ -1,5 +1,5 @@
-import 'package:cobaaa/Auth.dart';
-import 'package:cobaaa/widgets/original_button.dart';
+import 'package:findjobs/Auth.dart';
+import 'package:findjobs/widgets/original_button.dart';
 import 'package:flutter/material.dart';
 
 class AuthForm extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:cobaaa/widgets/auth_form.dart';
+import 'package:findjobs/widgets/auth_form.dart';
 import 'package:flutter/material.dart';
 
 enum AuthType { login, register }

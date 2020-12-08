@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:cobaaa/widgets/original_button.dart';
+import 'package:findjobs/widgets/original_button.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
