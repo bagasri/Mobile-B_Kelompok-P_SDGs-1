@@ -25,31 +25,31 @@ class _AuthFormState extends State<AuthForm> {
           children: <Widget>[
             TextFormField(
               decoration: InputDecoration(
-                labelText: 'Enter your email',
-                hintText: 'ex: test@gmail.com',
+                labelText: 'Email',
+                hintText: '',
               ),
               onChanged: (value) {
                 _email = value;
               },
               validator: (value) =>
-              value.isEmpty ? 'You must enter a valid email' : null,
+              value.isEmpty ? 'Masukkan email valid' : null,
             ),
             SizedBox(height: 10),
             TextFormField(
               decoration: InputDecoration(
-                labelText: 'Enter your password',
+                labelText: 'Password',
               ),
               obscureText: true,
               onChanged: (value) {
                 _password = value;
               },
               validator: (value) => value.length <= 6
-                  ? 'Your password must be larger than 6 characters'
+                  ? 'Password lebih dari 6 karakter'
                   : null,
             ),
             SizedBox(height: 20),
             OriginalButton(
-              text: widget.authType == AuthType.login ? 'Login' : 'Register',
+              text: widget.authType == AuthType.login ? 'Masuk' : 'Daftar',
               bgColor: Colors.lightBlue,
               textColor: Colors.white,
               onPressed: () async {
@@ -71,8 +71,8 @@ class _AuthFormState extends State<AuthForm> {
               },
               child: Text(
                 widget.authType == AuthType.login
-                    ? 'Don\'t have an account?'
-                    : 'Already have an account?',
+                    ? 'Tidak punya akun?'
+                    : 'Sudah punya akun?',
                 style: TextStyle(fontSize: 18, color: Colors.black54),
               ),
             ),

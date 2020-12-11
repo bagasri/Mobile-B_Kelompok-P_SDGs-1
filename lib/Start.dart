@@ -17,7 +17,7 @@ class StartScreen extends StatelessWidget {
               SizedBox(),
               Image.asset('assets/images/logo.png'),
               OriginalButton(
-                text: 'Get Started',
+                text: 'Mulai',
                 onPressed: () => Navigator.of(context).pushNamed('login'),
                 textColor: Colors.lightBlue,
                 bgColor: Colors.white,

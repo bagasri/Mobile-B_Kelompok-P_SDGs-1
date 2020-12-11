@@ -29,7 +29,9 @@ class AuthScreen extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(height: 50),
                     Text(
-                        'FindJobs',
+                        authType == AuthType.login
+                            ? 'Login'
+                            : 'Register',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 28,
