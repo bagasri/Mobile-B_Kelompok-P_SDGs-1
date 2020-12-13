@@ -15,7 +15,7 @@ class OriginalButton extends StatelessWidget {
       width: 300,
       child: RaisedButton(
         color: bgColor,
-          onPressed: onPressed,
+        onPressed: onPressed,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),
         ),

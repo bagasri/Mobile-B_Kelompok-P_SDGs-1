@@ -1,4 +1,5 @@
 import 'package:findjobs/Auth.dart';
+import 'package:findjobs/services/auth.dart';
 import 'package:findjobs/widgets/original_button.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class AuthForm extends StatefulWidget {
 class _AuthFormState extends State<AuthForm> {
   final _formKey = GlobalKey<FormState>();
   String _email = '', _password = '';
+  AuthBase authBase = AuthBase();
 
   @override
   Widget build(BuildContext context) {
@@ -49,15 +51,22 @@ class _AuthFormState extends State<AuthForm> {
             ),
             SizedBox(height: 20),
             OriginalButton(
-              text: widget.authType == AuthType.login ? 'Masuk' : 'Daftar',
-              bgColor: Colors.lightBlue,
-              textColor: Colors.white,
-              onPressed: () async {
-                if (_formKey.currentState.validate()) {
-                  print(_email);
-                  print(_password);
+                text: widget.authType == AuthType.login ? 'Masuk' : 'Daftar',
+                bgColor: Colors.lightBlue,
+                textColor: Colors.white,
+                onPressed: () async {
+                  if (_formKey.currentState.validate()) {
+                    if (widget.authType == AuthType.login) {
+                      await authBase.loginWithEmailAndPassword(_email, _password);
+                      Navigator.of(context).pushReplacementNamed('register');
+                    } else {
+                      await authBase.registerWithEmailAndPassword(_email, _password);
+                      Navigator.of(context).pushReplacementNamed('login');
+                    }
+//                  print(_email);
+//                  print(_password);
+                  }
                 }
-              }
             ),
             SizedBox(height: 6),
             FlatButton(
@@ -71,8 +80,8 @@ class _AuthFormState extends State<AuthForm> {
               },
               child: Text(
                 widget.authType == AuthType.login
-                    ? 'Tidak punya akun?'
-                    : 'Sudah punya akun?',
+                    ? 'Buat akun baru'
+                    : 'Sudah memiliki akun?',
                 style: TextStyle(fontSize: 18, color: Colors.black54),
               ),
             ),
