@@ -1,33 +1,18 @@
 import 'package:findjobs/Auth.dart';
 import 'package:findjobs/Start.dart';
-import 'package:findjobs/ui/app.dart';
-import 'package:findjobs/ui/page/home/home_page.dart';
+import 'package:findjobs/sidebar/sidebar_layout.dart';
 import 'package:flutter/material.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:findjobs/app_delegate.dart';
-import 'package:findjobs/locator.dart';
-import 'package:findjobs/ui/app.dart';
-import 'package:findjobs/ui/page/home/home_page.dart';
-
-
 
 void main() {
-  Bloc.observer = AppBlocDelegate();
-  findjobs(home: HomePage());
-  setUpDependency();
   runApp(MyApp());
 }
-
-
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false ,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -56,11 +41,11 @@ class MyApp extends StatelessWidget {
             borderSide: BorderSide(color: Colors.grey[200]),
             borderRadius: BorderRadius.circular((25)
             ),
-        ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey[200]),
-              borderRadius: BorderRadius.circular((25)
-              ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey[200]),
+            borderRadius: BorderRadius.circular((25)
+            ),
           ),
         ),
       ),
@@ -70,7 +55,7 @@ class MyApp extends StatelessWidget {
 
         'login': (context) => AuthScreen(authType: AuthType.login),
         'register': (context) => AuthScreen(authType: AuthType.register),
-        'homepage': (context) => HomePage(authTypeChange: AuthTypeChange.homepage),
+        'sidebarlayout': (context) => SideBarLayout(authTypee: AuthTypee.sidebarlayout),
 
       },
     );

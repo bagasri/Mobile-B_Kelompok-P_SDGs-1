@@ -2,8 +2,6 @@ import 'package:findjobs/Auth.dart';
 import 'package:findjobs/services/auth.dart';
 import 'package:findjobs/widgets/original_button.dart';
 import 'package:flutter/material.dart';
-import 'package:findjobs/ui/page/home/home_page.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthForm extends StatefulWidget {
   final AuthType authType;
@@ -60,7 +58,7 @@ class _AuthFormState extends State<AuthForm> {
                   if (_formKey.currentState.validate()) {
                     if (widget.authType == AuthType.login) {
                       await authBase.loginWithEmailAndPassword(_email, _password);
-                      Navigator.of(context).pushReplacementNamed('homepage');
+                      Navigator.of(context).pushReplacementNamed('sidebarlayout');
                     } else {
                       await authBase.registerWithEmailAndPassword(_email, _password);
                       Navigator.of(context).pushReplacementNamed('login');
