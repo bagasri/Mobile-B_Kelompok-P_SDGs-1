@@ -99,22 +99,11 @@ class HomePage extends StatelessWidget with NavigationStates {
               buildTextField("Password", "", true),
               buildTextField("Lokasi", "", false),
               SizedBox(
-                height: 35,
+                height: 5,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  OutlineButton(
-                    padding: EdgeInsets.symmetric(horizontal: 50),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    onPressed: () {},
-                    child: Text("BATAL",
-                        style: TextStyle(
-                            fontSize: 14,
-                            letterSpacing: 2.2,
-                            color: Colors.black)),
-                  ),
                   RaisedButton(
                     onPressed: () {},
                     color: Colors.blue,
