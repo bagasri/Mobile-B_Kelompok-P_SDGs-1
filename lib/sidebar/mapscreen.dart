@@ -68,7 +68,7 @@ class _MapScreenState extends State<MapScreen> {
     var lokasi = mb.LatLng(-8.1766639, 113.6916075);
 
     mapController.addCircle(mb.CircleOptions(
-      circleRadius: 80,
+      circleRadius: 5,
       circleColor: 'blue',
       circleOpacity: 1,
       geometry: lokasi,
