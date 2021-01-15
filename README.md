@@ -17,5 +17,3 @@ dan dari perusahaan manapun. Jadi buat para pengguna yang ingin mencari pekerjaa
 - ☑ Membuat StartPage
 - ☑ Membuat LoginPage
 - ☑ Membuat RegisterPage
-- ☑ Membuat Maps
-# Repository-Baru

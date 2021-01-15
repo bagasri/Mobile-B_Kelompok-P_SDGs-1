@@ -1,8 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:link/link.dart';
 import 'package:findjobs/model/network.dart';
 import '../navigation/navigation.dart';
+// ignore: unused_import
+import 'package:http/http.dart' as http;
 
 class MyAccountsPage extends StatelessWidget with NavigationStates {
   @override
