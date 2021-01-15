@@ -7,6 +7,7 @@ import 'package:rxdart/rxdart.dart';
 
 import '../navigation/navigation.dart';
 import '../sidebar/menu_item.dart';
+import 'package:findjobs/Start.dart';
 import 'mapscreen.dart';
 
 class SideBar extends StatefulWidget {
@@ -134,7 +135,9 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin<S
                       MenuItem(
                         icon: Icons.exit_to_app,
                         title: "Logout",
-                        
+                         onTap: () {
+                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> StartScreen()));
+                        },
                         
                       ),
                     ],
